@@ -1,0 +1,9 @@
+
+
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li><ol><%= "#{index + 1} - [#{recipe.done}] - #{recipe.name} - #{recipe.rating} - prep time: #{recipe.prep} - #{recipe.description}" %></ol></li>
+  <% end %>
+
+
+<a href='/new'>Create new recipe</a>
+<a href='/destroy'>destroy recipe</a>

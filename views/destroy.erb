@@ -1,0 +1,13 @@
+<% @recipes.each_with_index do |recipe, index| %>
+  <li><ol><%= "#{index + 1} - [#{recipe.done}] - #{recipe.name} - #{recipe.rating} - prep time: #{recipe.prep} - #{recipe.description}" %></ol></li>
+<% end %>
+
+<form action="/destroy_index" method="post" class="form-example">
+  <div class="form-example">
+    <label for="name">index to delete:</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="form-example">
+    <input type="submit" value="deleting recipe">
+  </div>
+</form>
